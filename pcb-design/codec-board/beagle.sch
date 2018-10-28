@@ -1,0 +1,926 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:switches
+LIBS:ctag-multi-audio-io-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 7 8
+Title "CTAG multi-audio IO"
+Date "2018-10-25"
+Rev "C"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 1150 950  0    60   BiDi ~ 0
+i2sa[1..4]
+Text HLabel 1150 2150 0    60   BiDi ~ 0
+i2sd[1..6]
+Text HLabel 4450 4750 2    60   BiDi ~ 0
+spi[1..4]
+Text HLabel 6000 3850 0    60   Output ~ 0
+RESETIN
+Entry Wire Line
+	1550 1600 1650 1700
+Entry Wire Line
+	1550 1450 1650 1550
+Entry Wire Line
+	1550 1300 1650 1400
+Entry Wire Line
+	1550 1150 1650 1250
+$Comp
+L R R701
+U 1 1 5621DC35
+P 2350 1250
+F 0 "R701" V 2430 1250 50  0000 C CNN
+F 1 "51" V 2350 1250 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0603" V 2280 1250 30  0001 C CNN
+F 3 "" H 2350 1250 30  0000 C CNN
+	1    2350 1250
+	0    1    1    0   
+$EndComp
+Entry Wire Line
+	3900 4350 3800 4250
+Entry Wire Line
+	3900 4450 3800 4350
+Entry Wire Line
+	3900 4550 3800 4450
+Entry Wire Line
+	3900 4650 3800 4550
+Text Label 1650 1250 0    60   ~ 0
+i2sa1
+Text Label 1650 1400 0    60   ~ 0
+i2sa2
+Text Label 1650 1550 0    60   ~ 0
+i2sa3
+Text Label 1650 1700 0    60   ~ 0
+i2sa4
+Text Label 1200 950  0    60   ~ 0
+i2sa[1..4]
+Text Label 3800 4250 2    60   ~ 0
+spi1
+Text Label 3800 4350 2    60   ~ 0
+spi2
+Text Label 3800 4450 2    60   ~ 0
+spi3
+Text Label 3800 4550 2    60   ~ 0
+spi4
+Text Label 4350 4750 2    60   ~ 0
+spi[1..4]
+$Comp
+L R R709
+U 1 1 56225E07
+P 2350 1550
+F 0 "R709" V 2430 1550 50  0000 C CNN
+F 1 "51" V 2350 1550 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0603" V 2280 1550 30  0001 C CNN
+F 3 "" H 2350 1550 30  0000 C CNN
+	1    2350 1550
+	0    1    1    0   
+$EndComp
+$Comp
+L R R710
+U 1 1 56225E4A
+P 2700 1700
+F 0 "R710" V 2780 1700 50  0000 C CNN
+F 1 "51" V 2700 1700 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0603" V 2630 1700 30  0001 C CNN
+F 3 "" H 2700 1700 30  0000 C CNN
+	1    2700 1700
+	0    1    1    0   
+$EndComp
+Entry Wire Line
+	1550 2350 1650 2450
+Entry Wire Line
+	1550 2550 1650 2650
+Entry Wire Line
+	1550 2450 1650 2550
+Entry Wire Line
+	1550 2650 1650 2750
+Entry Wire Line
+	1550 2750 1650 2850
+Entry Wire Line
+	1550 2850 1650 2950
+Text Label 1650 2450 0    60   ~ 0
+i2sd1
+Text Label 1650 2550 0    60   ~ 0
+i2sd2
+Text Label 1650 2650 0    60   ~ 0
+i2sd3
+Text Label 1650 2750 0    60   ~ 0
+i2sd4
+Text Label 1650 2850 0    60   ~ 0
+i2sd5
+Text Label 1650 2950 0    60   ~ 0
+i2sd6
+Text Label 1200 2150 0    60   ~ 0
+i2sd[1..6]
+Text Label 3250 1700 2    60   ~ 0
+ABCLK
+Text Label 3150 4250 0    60   ~ 0
+CIN
+Text Label 3150 4350 0    60   ~ 0
+COUT
+Text Label 3150 4450 0    60   ~ 0
+CCLK
+Text Label 3150 4550 0    60   ~ 0
+CLATCH
+Text Label 6000 3850 0    60   ~ 0
+RESETIN
+Text Label 3250 2950 2    60   ~ 0
+DBCLK
+Text Label 3250 2850 2    60   ~ 0
+DLRCLK
+Text Label 3250 2450 2    60   ~ 0
+DSDATA1
+$Comp
+L +3V3 #PWR049
+U 1 1 57CB8CF3
+P 10150 950
+F 0 "#PWR049" H 10150 800 50  0001 C CNN
+F 1 "+3V3" H 10150 1090 50  0000 C CNN
+F 2 "" H 10150 950 60  0000 C CNN
+F 3 "" H 10150 950 60  0000 C CNN
+	1    10150 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR050
+U 1 1 57CB8CF9
+P 10350 950
+F 0 "#PWR050" H 10350 800 50  0001 C CNN
+F 1 "+5V" H 10350 1090 50  0000 C CNN
+F 2 "" H 10350 950 60  0000 C CNN
+F 3 "" H 10350 950 60  0000 C CNN
+	1    10350 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR051
+U 1 1 57CB8D05
+P 9350 950
+F 0 "#PWR051" H 9350 800 50  0001 C CNN
+F 1 "+3V3" H 9350 1090 50  0000 C CNN
+F 2 "" H 9350 950 60  0000 C CNN
+F 3 "" H 9350 950 60  0000 C CNN
+	1    9350 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR052
+U 1 1 57CB8D0B
+P 9150 950
+F 0 "#PWR052" H 9150 800 50  0001 C CNN
+F 1 "+5V" H 9150 1090 50  0000 C CNN
+F 2 "" H 9150 950 60  0000 C CNN
+F 3 "" H 9150 950 60  0000 C CNN
+	1    9150 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L SYS_5V #PWR053
+U 1 1 57CB8D1B
+P 10600 950
+F 0 "#PWR053" H 10600 800 50  0001 C CNN
+F 1 "SYS_5V" H 10600 1090 50  0000 C CNN
+F 2 "" H 10600 950 60  0000 C CNN
+F 3 "" H 10600 950 60  0000 C CNN
+	1    10600 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L SYS_5V #PWR054
+U 1 1 57CB8D21
+P 8900 950
+F 0 "#PWR054" H 8900 800 50  0001 C CNN
+F 1 "SYS_5V" H 8900 1090 50  0000 C CNN
+F 2 "" H 8900 950 60  0000 C CNN
+F 3 "" H 8900 950 60  0000 C CNN
+	1    8900 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L BeagleBone_Black_Header P701
+U 1 1 57CB8D3A
+P 9750 2250
+F 0 "P701" H 9750 3450 50  0000 C CNN
+F 1 "BeagleBone_Black_Header" V 9750 2250 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x23" H 9750 1400 60  0001 C CNN
+F 3 "" H 9750 1400 60  0000 C CNN
+	1    9750 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L BeagleBone_Black_Header P702
+U 1 1 57CB8D41
+P 9750 5150
+F 0 "P702" H 9750 6350 50  0000 C CNN
+F 1 "BeagleBone_Black_Header" V 9750 5150 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x23" H 9750 4300 60  0001 C CNN
+F 3 "" H 9750 4300 60  0000 C CNN
+	1    9750 5150
+	1    0    0    -1  
+$EndComp
+Text Label 3250 1250 2    60   ~ 0
+ASDATA1
+NoConn ~ 9500 4150
+NoConn ~ 9500 4250
+NoConn ~ 9500 4350
+NoConn ~ 9500 4450
+NoConn ~ 9500 4550
+NoConn ~ 9500 4650
+NoConn ~ 9500 4750
+NoConn ~ 9500 4950
+NoConn ~ 9500 5050
+NoConn ~ 9500 5150
+NoConn ~ 9500 5250
+NoConn ~ 9500 5350
+NoConn ~ 9500 5450
+NoConn ~ 9500 5750
+NoConn ~ 9500 5850
+NoConn ~ 9500 5950
+NoConn ~ 9500 6050
+NoConn ~ 9500 6150
+NoConn ~ 9500 6250
+NoConn ~ 10000 4150
+NoConn ~ 10000 4250
+NoConn ~ 10000 4350
+NoConn ~ 10000 4450
+NoConn ~ 10000 4550
+NoConn ~ 10000 4750
+NoConn ~ 10000 4850
+NoConn ~ 10000 4950
+NoConn ~ 10000 5050
+NoConn ~ 10000 5150
+NoConn ~ 10000 5250
+NoConn ~ 10000 5350
+NoConn ~ 10000 5450
+NoConn ~ 10000 5750
+NoConn ~ 10000 5850
+NoConn ~ 10000 5950
+NoConn ~ 10000 6050
+NoConn ~ 10000 6150
+NoConn ~ 10000 6250
+Text Label 10550 2450 2    60   ~ 0
+B_DSDATA1
+Text Label 10550 2550 2    60   ~ 0
+B_ASDATA1
+NoConn ~ 10000 1750
+NoConn ~ 10000 1850
+NoConn ~ 9500 1650
+NoConn ~ 9500 1750
+NoConn ~ 9500 2050
+NoConn ~ 10000 2050
+NoConn ~ 10000 2250
+NoConn ~ 10000 2350
+NoConn ~ 9500 2350
+NoConn ~ 9500 2250
+NoConn ~ 9500 2750
+NoConn ~ 9500 2850
+NoConn ~ 9500 2950
+NoConn ~ 9500 3050
+NoConn ~ 9500 3150
+NoConn ~ 10000 2850
+NoConn ~ 10000 2950
+NoConn ~ 10000 3050
+NoConn ~ 10000 3150
+NoConn ~ 10000 1550
+NoConn ~ 9500 1550
+NoConn ~ 10000 2650
+NoConn ~ 10000 2750
+Text Label 5650 2850 2    60   ~ 0
+B_DSDATA1
+Text Label 5650 2750 2    60   ~ 0
+B_ASDATA1
+Text Label 4200 2750 0    60   ~ 0
+ASDATA1
+Text Label 6000 4650 0    60   ~ 0
+COUT
+Text Label 6000 4250 0    60   ~ 0
+CCLK
+Text Label 6000 4050 0    60   ~ 0
+CIN
+Text Label 10400 4650 2    60   ~ 0
+B_COUT
+Text Label 9100 4850 0    60   ~ 0
+B_CS0
+Text Label 6900 4650 2    60   ~ 0
+B_COUT
+Text Label 7700 4750 2    60   ~ 0
+B_CS0
+Text Label 9100 5550 0    60   ~ 0
+B_CS1
+Text Label 7700 4150 2    60   ~ 0
+B_CS1
+Text Label 10400 5550 2    60   ~ 0
+B_CCLK
+Text Label 6900 4250 2    60   ~ 0
+B_CCLK
+Text Label 9100 5650 0    60   ~ 0
+B_CIN
+Text Label 6900 4050 2    60   ~ 0
+B_CIN
+Text Label 10400 5650 2    60   ~ 0
+B_RESET
+Text Label 6900 3850 2    60   ~ 0
+B_RESET
+$Comp
+L PWR_FLAG #FLG055
+U 1 1 57F41F28
+P 8550 900
+F 0 "#FLG055" H 8550 995 50  0001 C CNN
+F 1 "PWR_FLAG" H 8550 1080 50  0000 C CNN
+F 2 "" H 8550 900 50  0000 C CNN
+F 3 "" H 8550 900 50  0000 C CNN
+	1    8550 900 
+	1    0    0    -1  
+$EndComp
+NoConn ~ 9500 1850
+NoConn ~ 9500 1950
+NoConn ~ 9500 2150
+NoConn ~ 10000 1950
+NoConn ~ 10000 2150
+NoConn ~ 2200 2650
+NoConn ~ 2200 2750
+Text Label 3250 1400 2    60   ~ 0
+ASDATA2
+Text Label 3250 2550 2    60   ~ 0
+DSDATA2
+$Comp
+L R R706
+U 1 1 581557D0
+P 2650 2450
+F 0 "R706" V 2730 2450 50  0000 C CNN
+F 1 "51" V 2650 2450 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0603" V 2580 2450 30  0001 C CNN
+F 3 "" H 2650 2450 30  0000 C CNN
+	1    2650 2450
+	0    1    1    0   
+$EndComp
+Text Label 6000 4450 0    60   ~ 0
+CLATCH
+$Comp
+L GND #PWR056
+U 1 1 595F4CB9
+P 10800 1150
+F 0 "#PWR056" H 10800 900 50  0001 C CNN
+F 1 "GND" H 10800 1000 50  0000 C CNN
+F 2 "" H 10800 1150 50  0000 C CNN
+F 3 "" H 10800 1150 50  0000 C CNN
+	1    10800 1150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR057
+U 1 1 595F4F82
+P 8700 1150
+F 0 "#PWR057" H 8700 900 50  0001 C CNN
+F 1 "GND" H 8700 1000 50  0000 C CNN
+F 2 "" H 8700 1150 50  0000 C CNN
+F 3 "" H 8700 1150 50  0000 C CNN
+	1    8700 1150
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR058
+U 1 1 595F5CF5
+P 10250 4050
+F 0 "#PWR058" H 10250 3800 50  0001 C CNN
+F 1 "GND" H 10250 3900 50  0000 C CNN
+F 2 "" H 10250 4050 50  0000 C CNN
+F 3 "" H 10250 4050 50  0000 C CNN
+	1    10250 4050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR059
+U 1 1 595F608D
+P 9250 4050
+F 0 "#PWR059" H 9250 3800 50  0001 C CNN
+F 1 "GND" H 9250 3900 50  0000 C CNN
+F 2 "" H 9250 4050 50  0000 C CNN
+F 3 "" H 9250 4050 50  0000 C CNN
+	1    9250 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L Jumper_NC_Dual JP701
+U 1 1 595F90E0
+P 7350 4450
+F 0 "JP701" H 7400 4350 50  0000 L CNN
+F 1 "M/S" H 7350 4550 50  0000 C BNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 7350 4450 50  0001 C CNN
+F 3 "" H 7350 4450 50  0001 C CNN
+	1    7350 4450
+	0    1    -1   0   
+$EndComp
+Text Notes 7200 3950 0    60   ~ 0
+Master/Slave Select
+$Comp
+L PWR_FLAG #FLG060
+U 1 1 5960381B
+P 9950 900
+F 0 "#FLG060" H 9950 995 50  0001 C CNN
+F 1 "PWR_FLAG" H 9950 1080 50  0000 C CNN
+F 2 "" H 9950 900 50  0000 C CNN
+F 3 "" H 9950 900 50  0000 C CNN
+	1    9950 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG061
+U 1 1 595F9494
+P 10450 750
+F 0 "#FLG061" H 10450 845 50  0001 C CNN
+F 1 "PWR_FLAG" H 10450 930 50  0000 C CNN
+F 2 "" H 10450 750 50  0000 C CNN
+F 3 "" H 10450 750 50  0000 C CNN
+	1    10450 750 
+	1    0    0    -1  
+$EndComp
+NoConn ~ 10000 1650
+Text Label 3250 1550 2    60   ~ 0
+ALRCLK
+Text Label 4200 2850 0    60   ~ 0
+DSDATA1
+NoConn ~ 10000 3250
+NoConn ~ 10000 3350
+NoConn ~ 9500 3350
+NoConn ~ 9500 3250
+Text Label 5450 1500 2    60   ~ 0
+DSDATA2
+Text Notes 850  4900 0    60   ~ 0
+Master
+Text Notes 2100 4900 0    60   ~ 0
+Slave
+Text Notes 1000 5000 0    60   ~ 0
+ASDATA2
+Text Notes 2100 5000 0    60   ~ 0
+ASDATA1
+Text Notes 1000 5100 0    60   ~ 0
+DSDATA2
+Text Notes 2100 5100 0    60   ~ 0
+DSDATA1
+Text Notes 2100 5200 0    60   ~ 0
+ASDATA2
+Text Notes 1050 5300 0    60   ~ 0
+ALRCLK
+Text Notes 1050 5400 0    60   ~ 0
+DLRCLK
+Text Notes 1100 5500 0    60   ~ 0
+ABCLK
+Text Notes 1100 5600 0    60   ~ 0
+DBCLK
+Text Notes 2100 5300 0    60   ~ 0
+ALRCLK
+Text Notes 2100 5400 0    60   ~ 0
+DLRCLK
+Text Notes 2100 5500 0    60   ~ 0
+ABCLK
+Text Notes 2100 5600 0    60   ~ 0
+DBCLK
+Text Notes 2100 5950 0    60   ~ 0
+BB
+Text Notes 2100 6250 0    60   ~ 0
+DLRCLK
+Text Notes 1000 5750 0    60   ~ 0
+ASDATA1
+Text Notes 2100 6050 0    60   ~ 0
+ASDATA1
+Text Notes 2100 6150 0    60   ~ 0
+DSDATA1
+Text Notes 1000 5850 0    60   ~ 0
+DSDATA1
+Text Notes 2100 6350 0    60   ~ 0
+DBCLK
+Text Label 8950 2550 0    60   ~ 0
+DLRCLK
+Text Label 8950 2650 0    60   ~ 0
+DBCLK
+Text Notes 800  4550 0    60   ~ 0
+Beast Configuration 16CH
+Text Label 4050 1500 0    60   ~ 0
+ASDATA2
+Text Notes 2050 4750 0    60   ~ 0
+Bottom Cape
+Text Notes 800  4750 0    60   ~ 0
+Top Cape
+Text Label 4050 1700 0    60   ~ 0
+ASDATA1
+Text Label 5450 1700 2    60   ~ 0
+DSDATA1
+$Comp
+L Conn_01x02 J702
+U 1 1 59FB7835
+P 4800 2400
+F 0 "J702" H 4800 2500 50  0000 C CNN
+F 1 "CHN" H 4800 2200 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 4800 2400 50  0001 C CNN
+F 3 "" H 4800 2400 50  0001 C CNN
+	1    4800 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L Conn_02x04_Odd_Even J701
+U 1 1 59FB7A6F
+P 4700 1500
+F 0 "J701" H 4750 1700 50  0000 C CNN
+F 1 "CFG" H 4750 1200 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x04" H 4700 1500 50  0001 C CNN
+F 3 "" H 4700 1500 50  0001 C CNN
+	1    4700 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR062
+U 1 1 59FB7AAA
+P 4000 1400
+F 0 "#PWR062" H 4000 1150 50  0001 C CNN
+F 1 "GND" H 4000 1250 50  0000 C CNN
+F 2 "" H 4000 1400 50  0001 C CNN
+F 3 "" H 4000 1400 50  0001 C CNN
+	1    4000 1400
+	0    1    1    0   
+$EndComp
+NoConn ~ 5000 1400
+Text Label 8950 2450 0    60   ~ 0
+SHDWN_REQ
+$Comp
+L SW_DIP_x02 SW701
+U 1 1 5A048DE8
+P 8350 2550
+F 0 "SW701" H 8350 2800 50  0000 C CNN
+F 1 "S_RESET" H 8350 2400 50  0000 C CNN
+F 2 "switches:PTS810" H 8350 2550 50  0001 C CNN
+F 3 "" H 8350 2550 50  0001 C CNN
+	1    8350 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR063
+U 1 1 5A04936A
+P 7850 2750
+F 0 "#PWR063" H 7850 2500 50  0001 C CNN
+F 1 "GND" H 7850 2600 50  0000 C CNN
+F 2 "" H 7850 2750 50  0001 C CNN
+F 3 "" H 7850 2750 50  0001 C CNN
+	1    7850 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_02x02_Odd_Even J703
+U 1 1 5A37EB60
+P 4950 2750
+F 0 "J703" H 5000 2850 50  0000 C CNN
+F 1 "~" H 5000 2550 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04" H 4950 2750 50  0001 C CNN
+F 3 "" H 4950 2750 50  0001 C CNN
+	1    4950 2750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 2550 3250 2550
+Wire Wire Line
+	2800 2450 3250 2450
+Wire Wire Line
+	1650 2450 2500 2450
+Wire Wire Line
+	1650 1400 3250 1400
+Wire Wire Line
+	2500 1250 3250 1250
+Wire Wire Line
+	1650 2650 2200 2650
+Connection ~ 8900 1050
+Wire Wire Line
+	8550 1050 8550 900 
+Wire Wire Line
+	8900 1050 8550 1050
+Wire Wire Line
+	9500 5650 9100 5650
+Wire Wire Line
+	10000 5650 10400 5650
+Wire Wire Line
+	10000 5550 10400 5550
+Wire Wire Line
+	9500 5550 9100 5550
+Wire Wire Line
+	9500 4850 9100 4850
+Wire Wire Line
+	10000 4650 10400 4650
+Wire Wire Line
+	5150 2850 5650 2850
+Wire Wire Line
+	5150 2750 5650 2750
+Wire Wire Line
+	4200 2850 4650 2850
+Wire Wire Line
+	6900 4250 6000 4250
+Wire Wire Line
+	6900 4050 6000 4050
+Wire Wire Line
+	6900 3850 6000 3850
+Wire Wire Line
+	10000 2550 10550 2550
+Wire Wire Line
+	10000 2450 10550 2450
+Wire Wire Line
+	9500 2650 8950 2650
+Wire Wire Line
+	9500 2550 8950 2550
+Wire Wire Line
+	10000 4050 10250 4050
+Wire Wire Line
+	9250 4050 9500 4050
+Wire Wire Line
+	9500 1150 8700 1150
+Wire Wire Line
+	10000 1150 10800 1150
+Wire Wire Line
+	8900 950  8900 1450
+Wire Wire Line
+	8900 1450 9500 1450
+Wire Wire Line
+	9150 1350 9150 950 
+Wire Wire Line
+	9500 1350 9150 1350
+Wire Wire Line
+	9350 1250 9350 950 
+Wire Wire Line
+	9500 1250 9350 1250
+Wire Wire Line
+	10600 1450 10000 1450
+Wire Wire Line
+	10600 950  10600 1450
+Wire Wire Line
+	10350 950  10350 1350
+Wire Wire Line
+	10350 1350 10000 1350
+Wire Wire Line
+	10150 950  10150 1250
+Wire Wire Line
+	10150 1250 10000 1250
+Wire Wire Line
+	3150 4550 3800 4550
+Wire Wire Line
+	3150 4450 3800 4450
+Wire Wire Line
+	3800 4350 3150 4350
+Wire Wire Line
+	3800 4250 3150 4250
+Wire Bus Line
+	1550 2150 1550 2850
+Wire Bus Line
+	1150 2150 1550 2150
+Wire Wire Line
+	2200 2750 1650 2750
+Wire Bus Line
+	3900 4750 4450 4750
+Wire Bus Line
+	3900 4350 3900 4750
+Wire Wire Line
+	1650 1250 2200 1250
+Wire Bus Line
+	1550 950  1550 1600
+Wire Bus Line
+	1150 950  1550 950 
+Wire Wire Line
+	4200 2750 4650 2750
+Wire Wire Line
+	6900 4650 6000 4650
+Wire Wire Line
+	7700 4750 7350 4750
+Wire Wire Line
+	7350 4750 7350 4700
+Wire Wire Line
+	7700 4150 7350 4150
+Wire Wire Line
+	7350 4150 7350 4200
+Wire Wire Line
+	7250 4450 6000 4450
+Wire Wire Line
+	9950 900  9950 1050
+Wire Wire Line
+	9950 1050 10150 1050
+Connection ~ 10150 1050
+Wire Wire Line
+	10350 1050 10450 1050
+Wire Wire Line
+	10450 1050 10450 750 
+Connection ~ 10350 1050
+Wire Wire Line
+	3350 1550 3350 2850
+Wire Wire Line
+	3450 2950 3450 1700
+Wire Wire Line
+	4500 1500 4050 1500
+Wire Wire Line
+	5000 1500 5450 1500
+Wire Notes Line
+	800  4800 800  5900
+Wire Notes Line
+	1400 4800 1400 5900
+Wire Notes Line
+	1400 4800 800  4800
+Wire Notes Line
+	2050 4800 2050 5750
+Wire Notes Line
+	2050 5750 2650 5750
+Wire Notes Line
+	2650 5750 2650 4800
+Wire Notes Line
+	2650 4800 2050 4800
+Wire Notes Line
+	2050 4950 1400 4950
+Wire Notes Line
+	1400 4950 1450 5000
+Wire Notes Line
+	1400 4950 1450 4900
+Wire Notes Line
+	1400 5050 2050 5050
+Wire Notes Line
+	2050 5050 2000 5000
+Wire Notes Line
+	2050 5050 2000 5100
+Wire Notes Line
+	2050 5150 1900 5150
+Wire Notes Line
+	1900 5100 1900 5200
+Wire Notes Line
+	1400 5250 2050 5250
+Wire Notes Line
+	2050 5350 1400 5350
+Wire Notes Line
+	1400 5450 2050 5450
+Wire Notes Line
+	2050 5550 1400 5550
+Wire Notes Line
+	1700 5450 1700 6300
+Wire Notes Line
+	2050 5850 2650 5850
+Wire Notes Line
+	2650 5850 2650 6400
+Wire Notes Line
+	2050 6400 2050 5850
+Wire Notes Line
+	1400 5900 800  5900
+Wire Notes Line
+	2650 6400 2050 6400
+Wire Notes Line
+	1400 5700 1950 5700
+Wire Notes Line
+	1950 5700 1950 6000
+Wire Notes Line
+	1950 6000 2050 6000
+Wire Notes Line
+	2050 6000 2000 5950
+Wire Notes Line
+	2050 6000 2000 6050
+Wire Notes Line
+	2050 6100 1900 6100
+Wire Notes Line
+	1900 6100 1900 5800
+Wire Notes Line
+	1900 5800 1400 5800
+Wire Notes Line
+	1400 5800 1450 5750
+Wire Notes Line
+	1400 5800 1450 5850
+Wire Notes Line
+	1700 6300 2050 6300
+Wire Notes Line
+	2050 6300 2000 6250
+Wire Notes Line
+	2050 6300 2000 6350
+Wire Notes Line
+	1750 5250 1750 6200
+Wire Notes Line
+	1750 6200 2050 6200
+Wire Notes Line
+	2050 6200 2000 6150
+Wire Notes Line
+	2050 6200 2000 6250
+Wire Notes Line
+	2050 5350 2000 5300
+Wire Notes Line
+	2050 5350 2000 5400
+Wire Notes Line
+	2050 5250 2000 5200
+Wire Notes Line
+	2000 5300 2050 5250
+Wire Notes Line
+	2000 5400 2050 5450
+Wire Notes Line
+	2050 5450 2000 5500
+Wire Notes Line
+	2000 5500 2050 5550
+Wire Notes Line
+	2050 5550 2000 5600
+Connection ~ 1750 5250
+Connection ~ 1750 5350
+Connection ~ 1700 5450
+Connection ~ 1700 5550
+Wire Notes Line
+	700  4450 2750 4450
+Wire Notes Line
+	2750 4450 2750 6450
+Wire Notes Line
+	2750 6450 700  6450
+Wire Notes Line
+	700  6450 700  4450
+Wire Wire Line
+	4050 1700 4500 1700
+Wire Wire Line
+	5450 1700 5000 1700
+Wire Wire Line
+	5000 1600 5600 1600
+Wire Wire Line
+	5600 1600 5600 2050
+Wire Wire Line
+	5600 2050 4800 2050
+Wire Wire Line
+	4800 2050 4800 2200
+Wire Wire Line
+	4500 1600 3900 1600
+Wire Wire Line
+	3900 1600 3900 2050
+Wire Wire Line
+	3900 2050 4700 2050
+Wire Wire Line
+	4700 2050 4700 2200
+Wire Wire Line
+	4500 1400 4000 1400
+Wire Wire Line
+	8650 2450 9500 2450
+Wire Wire Line
+	8650 2550 8750 2550
+Wire Wire Line
+	8750 2550 8750 2450
+Connection ~ 8750 2450
+Wire Wire Line
+	8050 2450 7850 2450
+Wire Wire Line
+	7850 2450 7850 2750
+Wire Wire Line
+	8050 2550 7850 2550
+Connection ~ 7850 2550
+Wire Notes Line
+	1400 5350 1450 5300
+Wire Notes Line
+	1400 5350 1450 5400
+Wire Notes Line
+	1400 5550 1450 5500
+Wire Notes Line
+	1400 5550 1450 5600
+Wire Notes Line
+	1550 5200 1600 5250
+Wire Notes Line
+	1600 5250 1550 5300
+Wire Notes Line
+	1550 5400 1600 5450
+Wire Notes Line
+	1600 5450 1550 5500
+Wire Wire Line
+	3450 2950 1650 2950
+Wire Wire Line
+	3350 2850 1650 2850
+Wire Wire Line
+	3350 1550 2500 1550
+Wire Wire Line
+	3450 1700 2850 1700
+Wire Wire Line
+	2200 1550 1650 1550
+Wire Wire Line
+	1650 1700 2550 1700
+$EndSCHEMATC
